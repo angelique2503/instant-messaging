@@ -1,0 +1,15 @@
+$color: 'green';
+
+// Config
+@import "config/colors";
+@import "config/mixins";
+@import "config/animations";
+
+// Base
+@import "base/normalize";
+@import "base/base";
+
+// Layouts
+@import "layouts/grid";
+@import "layouts/footer";
+@import "layouts/connexion";
