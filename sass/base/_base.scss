@@ -1,0 +1,287 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Inconsolata', monospace;
+	font-size: 1em;
+	line-height: 1.8em;
+}
+
+a {
+	text-decoration: none;
+	color: $light;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	margin: 0;
+}
+
+/* Document */
+
+body {
+	background: $dark;
+}
+
+main {
+	background: $semi_dark;
+}
+
+section, footer {
+	background: $dark;
+	padding: 2em;
+	margin: 0!important;
+}
+
+section {
+	// padding: 3em;
+	header {
+		position: relative;
+		a {
+			top: 0;
+			right: 0;
+			position: absolute;
+		}
+	}
+}
+
+aside {
+	padding: 1.5em;
+}
+
+/* Titres */
+
+h1 {
+	text-align: center;
+	font-size: 1.3em;
+	padding-top: .1em;
+	color: $light;
+	padding-bottom: 1em;
+}
+
+h2 {
+	padding: 0;
+	margin: 0;
+}
+
+h4 {
+	margin-top: 0;
+	padding: .5em 0;
+	padding-bottom: 0;
+}
+
+/* Formulaire */
+
+label {
+	display: block;
+	color: $medium;
+	padding-bottom: .5em;
+	padding-top: 1em;
+}
+
+textarea {
+	width: 100%;
+	height: 5em;
+	background: $dark;
+	border: 1px solid $medium;
+	padding: 1em;
+	@extend %borderRadius;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+	border: 1px solid $light;
+}
+
+input[type="text"], input[type="password"] {
+	background: $dark;
+	border: 1px solid $medium;
+	color: $light;
+	height: 40px;
+	padding-left: 1em;
+	width: 50%;
+	@extend %borderRadius;
+}
+
+select {
+	background: $dark;
+	@extend %borderRadius;
+	padding: .2em;
+	border: solid $medium 1px;
+	color: $light;
+	position: relative;
+}
+
+/*.select-wrapper {
+	   overflow-x:hidden;
+	   border:1px solid red;
+	   border-radius:3px;
+	   padding:5px;
+	   cursor:pointer;
+	   padding: 0;
+}
+
+.select-wrapper select {
+	border:0; 
+	min-width:100%;
+	cursor:pointer;
+	text-shadow: 0 0 0 #000;
+	-webkit-appearance:none;
+	outline:none;
+    white-space:nowrap;
+}
+
+.select-wrapper:after { 
+	content:">";
+	display:block;
+	position:absolute;
+	top: 0;
+	right: 0;
+	background-color:#fff;
+	width:32px;
+	height: 100%;
+	text-align:center;
+}*/
+
+/* Pour Opera noindex:-o-prefocus, .select-wrapper select {     color:#000;}*/
+
+option {
+	border: none!important;
+}
+
+/* Boutons */
+
+button, #friend-list a, .active, .menu-button, input[type="submit"] {
+	background: $medium;
+	border: 1px solid $medium;
+	color: $light;
+	height: 40px;
+	padding: 0 1.2em;
+	cursor: pointer;
+}
+
+button:hover, #friend-list a:hover, input[type="submit"] {
+	background: $dark;
+}
+
+/* Footer */
+
+footer {
+	padding: .2em;
+	text-align: center;
+}
+
+footer p {
+	color: $medium;
+}
+
+.account-infos {
+	input[type="text"], select {
+		width: 50%;
+	}
+}
+
+.user-message, .user-pseudo, textarea, h2, p {
+	color: $light;
+}
+
+.user-pseudo {
+	margin-bottom: 0;
+}
+
+ul#chat-box {
+	background: #111D1C;
+	padding: 1em 1.5em;
+	overflow-y: scroll;
+	margin-bottom: 0;
+	li {
+		border-top: 1px $medium solid;
+		margin: 1em 2em;
+	}
+	li:first-child {
+		border-top: none;
+	}
+	h4, .msg-date {
+		display: inline-block;
+	}
+	.msg-date {
+		color: $medium;
+		font-weight: normal;
+		font-size: 14px;
+		margin-left: 1em;
+	}
+}
+
+#friend-list a {
+	display: inline-block;
+	height: auto;
+	width: auto;
+	margin-bottom: .5em;
+	padding: .5em 1.2em;
+}
+
+.cercle {
+	display: inline-block;
+	width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-left: .5em;
+}
+
+.online { background: #18FF92; }
+.inactive { background: #FBF38C; }
+.busy { background: red; }
+.offline { background: grey; }
+
+input#search-box {
+	width: 100%;
+}
+
+.show {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+strong {
+	display: block;
+	color: $light;
+	font-style: italic;
+	font-weight: normal;
+	margin-top: 1.2em;
+}
+
+/* Navigation */
+
+nav#menu ul {
+	display: table;
+	margin: 0 auto;
+	padding-left: 0;
+	margin-bottom: 2em;
+	li {
+		display: table-cell;
+		margin-left: 1em;
+		.menu-button { display: block; background: transparent; border: none; border-bottom: solid 5px $dark; }
+		.menu-button:hover { background: $dark; border-color: $medium; }
+		.menu-button.active { border-color: $light; }
+	}
+}
+
+#chat-box::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#chat-box::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
