@@ -22,6 +22,14 @@ textarea, input[type="text"], input[type="password"], select, #connexion section
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
 
+/*	!
+	* animate.css - https://daneden.github.io/animate.css/
+	* Copyright (c) 2018 Daniel Eden
+	* Version - 3.7.0
+	* Licensed under the MIT license - https://opensource.org/licenses/MIT
+	*
+*/
+
 @keyframes animatedBackground {
   from {
     background-position: 0 0; }
